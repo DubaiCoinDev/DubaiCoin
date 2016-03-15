@@ -47,7 +47,7 @@ unsigned int nTargetSpacing = 1 * 60; // 1 minute blocks
 static const int64_t nInterval = nTargetTimespan / nTargetSpacing;
 static const int64_t nDiffChangeTarget = 1;
 
-unsigned int nStakeMinAge = 60 * 60 * 24 * 30; // 30 days
+unsigned int nStakeMinAge = 60 * 60 * 1; // 1 hour
 unsigned int nStakeMaxAge = 60 * 60 * 24 * 180;  // 180 days
 unsigned int nModifierInterval = 10 * 60; // Time to elapse before new modifier is computed
 
@@ -993,33 +993,33 @@ int64_t GetProofOfWorkReward(int64_t nFees)
     {
         nSubsidy = 0 * COIN;
     }
-        else if(pindexBest->nHeight < 50000)
+        else if(pindexBest->nHeight < 40000)
     {
-        nSubsidy = 100 * COIN; // 5000000
+        nSubsidy = 100 * COIN; 
     }
-        else if(pindexBest->nHeight < 100000)
+        else if(pindexBest->nHeight < 80000)
     {
-        nSubsidy = 50 * COIN; // 2500000
+        nSubsidy = 50 * COIN; 
     }
-        else if(pindexBest->nHeight < 150000)
+        else if(pindexBest->nHeight < 120000)
     {
-        nSubsidy = 25 * COIN; // 1250000
+        nSubsidy = 25 * COIN; 
+    }
+        else if(pindexBest->nHeight < 160000)
+    {
+        nSubsidy = 12.5 * COIN; 
     }
         else if(pindexBest->nHeight < 200000)
     {
-        nSubsidy = 12.5 * COIN; // 625000
+        nSubsidy = 6.25 * COIN; 
     }
-        else if(pindexBest->nHeight < 250000)
+        else if(pindexBest->nHeight < 240000)
     {
-        nSubsidy = 6.25 * COIN; // 312500
+        nSubsidy = 3.125 * COIN; 
     }
-        else if(pindexBest->nHeight < 300000)
+        else if(pindexBest->nHeight < 280000)
     {
-        nSubsidy = 3.125 * COIN; // 156250
-    }
-        else if(pindexBest->nHeight < 350000)
-    {
-        nSubsidy = 1.5625 * COIN; // 78125
+        nSubsidy = 1.5625 * COIN; 
     }
     if (fDebug && GetBoolArg("-printcreation"))
         printf("GetProofOfWorkReward() : create=%s nSubsidy=%"PRId64"\n", FormatMoney(nSubsidy).c_str(), nSubsidy);
@@ -1031,11 +1031,11 @@ int64_t GetProofOfWorkReward(int64_t nFees)
 int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
 {
     
-    int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8);  //default 4% monthly
+    int64_t nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8);  //default 10% yearly
 
-   if(pindexBest->nHeight > 100)
+   if(pindexBest->nHeight > 30000)
     {
-        nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8);  //default 4% monthly
+        nSubsidy = nCoinAge * COIN_YEAR_REWARD * 33 / (365 * 33 + 8);  //default 10% yearly
     }    
 
     if (fDebug && GetBoolArg("-printcreation"))
