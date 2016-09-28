@@ -12,29 +12,29 @@ A new and exciting Open Source currency that will revolutionize Gold/Diamond pur
 
 Dubaicoin using secure POS algorithm.
 
-DubaiCoin - DBIC
+DubaiCoin - DBIC<br />
 
-Ticker: DBIC
-Algorithm: SHA-256
-Supply: 10 500 000
-Premine: 1%
-Pos: 10% pa
-Number Of Blocks: 280 000
-60 Seconds Per Block
-10 Blocks to Confirm
-Min. Staking Age: 1 hour
+Ticker: DBIC<br />
+Algorithm: SHA-256<br />
+Supply: 10 500 000<br />
+Premine: 1%<br />
+Pos: 10% pa<br />
+Number Of Blocks: 280 000<br />
+60 Seconds Per Block<br />
+10 Blocks to Confirm<br />
+Min. Staking Age: 1 hour<br />
 
-Block Rewards:
+Block Rewards:<br />
 
-1: ~ 1% Premine
-2-100: 0 (instamine protection)
-101-40,000: 100 (~ 1 month)
-40,001-80,000: 50 (~ 1 month)
-80,001-120,000: 25  (~ 1 month)
-120,001-160,000: 12.5  (~ 1 month)
-160,001-200,000: 6.25 (~ 1 month)
-200,001-240,000: 3.125 (~ 1 month)
-240,001-280,000: 1.5625 (~ 1 month)
+1: ~ 1% Premine<br />
+2-100: 0 (instamine protection)<br />
+101-40,000: 100 (~ 1 month)<br />
+40,001-80,000: 50 (~ 1 month)<br />
+80,001-120,000: 25  (~ 1 month)<br />
+120,001-160,000: 12.5  (~ 1 month)<br />
+160,001-200,000: 6.25 (~ 1 month)<br />
+200,001-240,000: 3.125 (~ 1 month)<br />
+240,001-280,000: 1.5625 (~ 1 month)<br />
 
 For more information, as well as an immediately useable, binary version of
 the Dubaicoin client sofware, see https://dubaicoin.org/.
